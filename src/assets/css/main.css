@@ -16,6 +16,7 @@ html {
 :root {
   --primary: #664EFC;
   --hover:#806BFF;
+  --grey:#747474;
   --transition: 0.3s ease-in-out all;
   --headingFont: 'Roboto', sans-serif;
   --bodyFont: 'Nunito', sans-serif;
@@ -25,6 +26,10 @@ html {
 h1 {
   font-family: var(--headingFont);
   font-size: 32px;
+}
+
+h2 {
+  font-family: var(--headingFont);
 }
 
 p {
@@ -40,6 +45,13 @@ button {
 
 a {
   text-decoration: none;
+}
+ul{
+  padding: 0;
+}
+li {
+  font-family: var(--bodyFont);
+  list-style: none;
 }
 
 .page {
@@ -337,5 +349,79 @@ a {
   }
   .info-content p {
     font-size: 16px;
+  }
+}
+
+/* Footer section */
+.footer {
+  padding: 20px 0px;
+}
+.footer-main h1{
+  padding-bottom: 10px;
+}
+.footer-main p{
+  color: var(--grey);
+  font-size: 14px;
+}
+.footer-link-container {
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-link h2{
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+.footer-link li{
+  padding: 5px 0px;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .footer-main {
+    width: 60%;
+  }
+  .footer-link-container {
+    width: 40%;
+    padding-top:0px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px 20px;
+  }
+  .footer-link h2{
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+  .footer-link li{
+    padding: 5px 0px;
+    font-size: 16px;
+    font-weight: 100;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .footer {
+    gap: 50px;
+    justify-content: start;
+  }
+  .footer-main {
+    width: 40%;
+  }
+
+  .footer-link-container {
+    width: 60%;
+    display: flex;
+  }
+  .footer-link h2 {
+    font-size: 20px;
+  }
+  .footer-link li {
+    font-size: 18px;
   }
 }

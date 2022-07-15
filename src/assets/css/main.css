@@ -1,3 +1,6 @@
+body, html {
+  height: 100%;
+}
 *,
 ::after,
 ::before {
@@ -94,7 +97,6 @@ li {
   color: white;
 }
 
-
 .nav-links {
   height: 0;
   display: flex;
@@ -173,7 +175,7 @@ li {
 /* Homepage section*/
 
 .hero-section {
-
+  padding: 20px 0px;
 }
 .hero-image {
   width: 70vw;
@@ -184,17 +186,14 @@ li {
   padding-bottom: 10px;
 }
 
-.hero-content {
-  
-}
-
-.hero-content h1,p,button {
-  padding-bottom: 10px;
+.hero-content h1 {
+  margin-bottom: 20px;
 }
 
 .hero-content p {
   color: #747474;
   font-weight: 100;
+  margin-bottom: 20px;
 }
 
 .hero-signup-btn {
@@ -240,7 +239,7 @@ li {
     display: flex;
     flex-direction: row-reverse;
   }
-  .hero-content h1,p {
+  .hero-content h1 {
     padding-bottom: 20px;
   }
   .hero-image {
@@ -255,7 +254,7 @@ li {
     font-size: 14px;
   }
   .hero-avatar {
-    width: 10vw;
+    width: 12vw;
     padding: 20px 0px;
   }
 }
@@ -270,12 +269,13 @@ li {
 
 .info-content h1 {
   font-size: 28px;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 .info-content p {
   font-size: 14px;
   font-weight: 100;
   color: #747474;
+  margin-bottom: 10px;
 }
 
 .info-link {
@@ -329,7 +329,7 @@ li {
     width: 70%;
     margin: auto;
   }
-  .info-section2 {
+  .info-section2 { 
     display: flex;
   }
   .info-image-2 {
@@ -408,7 +408,7 @@ li {
 @media screen and (min-width: 1080px) {
   .footer {
     gap: 50px;
-    justify-content: start;
+    justify-content: flex-start;
   }
   .footer-main {
     width: 40%;
@@ -425,3 +425,157 @@ li {
     font-size: 18px;
   }
 }
+
+/* SignUp Page */
+.signup-background {
+  background: url(../images/gradient-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.signup-nav-header {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.back-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.signup-nav-btn {
+  margin: 0px auto;
+  padding: 6px 10px;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.signup-nav-btn:hover {
+  background-color: var(--hover);
+}
+.signup-nav-text {
+  display: none;
+}
+.signup {
+  padding-bottom: 30px;
+}
+
+.signup-content h1{
+  margin-bottom: 20px;
+}
+
+.signup-content-p {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.signup-content-p p{
+  font-weight: 100;
+  line-height: 1.5;
+}
+.bold{
+  font-weight: 900;
+}
+.signup-content-icon {
+  margin: 0px;
+  vertical-align: top;
+}
+
+.signup-form-container {
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  border: solid white 1px;
+  border-radius: 5px;
+  padding: 20px 16px;
+}
+.signup-form-container h1{
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+.signup-form label{
+  margin-top: 18px;
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+}
+.signup-form input {
+  font-size: 14px;
+  padding: 12px 6px;
+  border: solid lightgray;
+  border-radius: 5px;
+  font-family: var(--bodyFont);
+}
+.signup-terms {
+  margin-top: 20px;
+  display: flex;
+  gap: 5px;
+  font-family: var(--bodyFont);
+}
+.signup-terms input {
+  margin-top: 0;
+}
+.signup-terms label {
+  font-weight: 300;
+}
+.signup-form-btn {
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 12px 0px;
+  background-color: var(--primary);
+  color: white;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.signup-form-btn:hover{
+  background-color: var(--hover);
+}
+@media screen and (min-width: 768px) {
+  .signup-nav-text {
+    font-size: 16px;
+    display: block;
+    margin-left: 10px;
+    text-transform: capitalize;
+  }
+ .signup-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }  
+}
+@media screen and (min-width:768px) {
+  .signup-form-container{
+    padding: 50px 60px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .signup-background {
+    min-height: 100vh;
+  }
+  .signup {
+    display: flex;
+    gap: 100px;
+    min-height: auto;
+    margin-top: 80px;
+  }
+  .signup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .signup-nav-text {
+    font-size: 18px;
+  }
+}
+
+

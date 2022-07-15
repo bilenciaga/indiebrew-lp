@@ -44,7 +44,7 @@ const Navbar = () => {
             support
           </Link>
           <div className="nav-link" style={{marginRight:'0px'}}>
-            <Link to="/" className="btn" onClick={() => setShow(false)}>
+            <Link to="/signup" className="btn" onClick={() => setShow(false)}>
               <button className='signup-btn'>
                 Get Started - it's free
               </button>

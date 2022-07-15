@@ -1,6 +1,7 @@
 import React from 'react';
-import '../assets/css/main.css'
+import '../assets/css/main.css';
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
 const Hero = () => {
   return (
@@ -17,9 +18,11 @@ const Hero = () => {
           <p>
             With IndieBrew, get personal feeds from resources all around the web including Reddit, HackerNews, IndieHackers, and much more
           </p>
-          <button className='hero-signup-btn'>
-            Get Started - it's free
-          </button>
+          <Link to ='/signup'>
+            <button className='hero-signup-btn'>
+              Get Started - it's free
+            </button>
+          </Link>
           <div className='hero-avatar'>
             <StaticImage src='../assets/images/User Avatars.svg' 
             />
